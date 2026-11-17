@@ -39,7 +39,7 @@ The logged in user is identified via the following snippet in the html source of
     </div>
 </li>
 ```
-> The <li> item above resides inside CSS path `body#pageid-gallery.c-bodyColor nav#ddmenu ul.navhideonmobile`.
+> The `<li>` item above resides inside CSS path `body#pageid-gallery.c-bodyColor nav#ddmenu ul.navhideonmobile`.
 
 Recommendation: identify the logged in user by the <a> element that has a img.loggedin_user_avatar inside's href property.
 
@@ -61,7 +61,7 @@ Browsing to the next page is achieved by clicking on the button labeled "Next" w
     </div>
 </div>
 ```
-> The <div> element above resides inside CSS path `html body#pageid-gallery.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#page-galleryscraps div#columnpage div.content section.gallery-section div.section-body div.submission-list`.
+> The `<div>` element above resides inside CSS path `html body#pageid-gallery.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#page-galleryscraps div#columnpage div.content section.gallery-section div.section-body div.submission-list`.
 
 Recommendation: identify the button by its form action `<form action="/gallery/USERNAME/x/" method="GET">`.
 
@@ -88,7 +88,7 @@ within the *Gallery Page*, individual *Image Pages* are linked with the followin
     </figcaption>
 </figure>
 ```
-> The <figure> element above resides inside CSS path `html body#pageid-gallery.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#page-galleryscraps div#columnpage div.content section.gallery-section div.section-body div.submission-list section#gallery-gallery.gallery.no-padding.aligncenter.no-artistname.s-250`.
+> The `<figure>` element above resides inside CSS path `html body#pageid-gallery.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#page-galleryscraps div#columnpage div.content section.gallery-section div.section-body div.submission-list section#gallery-gallery.gallery.no-padding.aligncenter.no-artistname.s-250`.
 
 Recommendation: identify *Image Page* links by their link `<a href="/view/SUBMISSIONID">` within `.gallery`.
 
@@ -141,7 +141,7 @@ The desired full-res image is placed in the following snippet:
     </div>
 </div>
 ```
-> The <div> element above resides within CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div`.
+> The `<div>` element above resides within CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div`.
 
 Recommendation: identify the image URL via `img#submissionImg`'s src property.
 
@@ -157,20 +157,20 @@ Resides in the snippet
     <div class="highlight">Rating</div>
 </div>
 ```
-> The <div> element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div div.submission-page-stats`.
+> The `<div>` element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div div.submission-page-stats`.
 
 Values may be "General", "Mature" or "Adult".
 
 ##### Title
-Resides the <img> alt property but also in the snippet
+Resides the `<img>` alt property but also in the snippet
 ```
 <div class="submission-title">
     <h2>IMAGETITLE</h2>
 </div>
 ```
-> The <div> element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div.submission-details div section.submission-description div.section-header.submission-description-header div.submission-description-artist div`.
+> The `<div>` element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div.submission-details div section.submission-description div.section-header.submission-description-header div.submission-description-artist div`.
 
-Recommendation: extract the title from the <img> alt property or from the string value of <h2> within <div class="submission-title">.
+Recommendation: extract the title from the `<img>` alt property or from the string value of `<h2>` within `<div class="submission-title">`.
 
 ##### Tags
 The tags are already attached to the image itself, see *The Image*.
@@ -185,7 +185,7 @@ The tags include FurAffinity-specific tags that are to be converted in the follo
 All conversions are sourced in transform.js.
 
 ##### Description
-Resides <img> data-tags property and in this snippet:
+Resides ´<img>` data-tags property and in this snippet:
 ```
 <div class="submission-description-text user-submitted-links">
     What a lovely image!<br>
@@ -193,9 +193,9 @@ Resides <img> data-tags property and in this snippet:
     art by <a href="/user/SOMEOTHERUSER" class="iconusername"><img src="//a.furaffinity.net/17174310667/something.gif" title="SOMEOTHERUSER" alt="SOMEOTHERDISPLAYNAME">&nbsp;<span class="c-usernameBlockSimple username-underlined"><span class="c-usernameBlockSimple__displayName" title="SOMEOTHERDISPLAYNAME">SOMEOTHERDISPLAYNAME</span></span></a> <a class="auto_link" href="https://www.furaffinity.net/view/61840189/">(some link)</a>
 </div>
 ```
-> The <div> element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div.submission-details div section.submission-description div.section-body`.
+> The `<div>` element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div.submission-details div section.submission-description div.section-body`.
 
-Recommendation: extract the tags from the <img> data-tags property, or alternatively, from the snippet above.
+Recommendation: extract the tags from the `<img>` data-tags property, or alternatively, from the snippet above.
 
 **Conversion**
 The description may include FurAffinity-specific links that are to be converted by the following rules:
@@ -214,7 +214,7 @@ The original submission date resides in the following snippet:
 ```
 <span class="popup_date" data-title-date="1" data-24-hour="0" data-time="1784324577" title="July 17, 2026 11:42:57 PM">3 months ago</span>
 ```
-> The <span> element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div.submission-details div section.submission-description div.section-header.submission-description-header div.submission-description-artist div div`.
+> The `<span>` element above resides in CSS path `html body#pageid-submission.c-bodyColor div#main-window.footer-mobile-tweak.g-wrapper div#site-content div#submission_page.page-content-type-image div div.submission-page-content div#submission-main-content.content-with-sidebar div div.submission-details div section.submission-description div.section-header.submission-description-header div.submission-description-artist div div`.
 
 Recommendation: extract the date time from .popup_date data-time and convert it to an ISO 8601 string for the sidecar.
 
