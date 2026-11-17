@@ -1,0 +1,63 @@
+{
+    "manifest_version": 3,
+    "name": "FurAffinity Exporter",
+    "version": "0.1.0",
+    "description": "Downloads a FurAffinity user's complete gallery with sidecar json files for meta data.",
+
+
+    "developer": {
+        "name": "Flam",
+        "url": "https://flam.dogpixels.net/"
+    },
+
+    "icons": {
+        "32": "img/32.png",
+        "64": "img/64.png",
+        "128": "img/128.png",
+        "256": "img/256.png"
+    },
+
+    "permissions": ["storage","downloads","tabs"],
+    "host_permissions": [
+        "https://www.furaffinity.net/gallery/*",
+        "https://www.furaffinity.net/view/*",
+        "https://d.furaffinity.net/*"
+    ],
+    "background": {
+        "scripts": ["transform.js", "background.js"],
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.furaffinity.net/gallery/*",
+                "https://www.furaffinity.net/view/*"
+            ],
+            "js": ["transform.js", "content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Open faex options",
+        "default_icon": {
+            "8": "img/8.png",
+            "16": "img/16.png",
+            "32": "img/32.png",
+            "64": "img/64.png",
+            "128": "img/128.png",
+            "192": "img/192.png",
+            "256": "img/256.png",
+            "512": "img/512.png"
+        }
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "@dogpixels.faex",
+            "strict_min_version": "156.0",
+            "data_collection_permissions": {
+                "required": ["none"]
+            }
+        }
+    }
+}

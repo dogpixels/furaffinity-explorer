@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FaEx - Options</title>
+        <style>
+            body { font-family: sans-serif; max-width: 40em; margin: 2em auto; }
+            label { display: block; margin: 1em 0 .25em; }
+            input { width: 100%; padding: .4em; }
+            button { margin-top: 1em; padding: .5em 1.5em; }
+            #status { margin-left: 1em; color: green; }
+        </style>
+    </head>
+    <body>
+        <h1>FurAffinity Exporter (FaEx)</h1>
+        <p>
+            Before you begin, it is highly recommended to empty your download history (this is being used to check for file name collisions).
+        </p>
+
+        <label for="downloadPath">Download folder (relative to the browser's download directory, e.g. "faex")</label>
+        <input type="text" id="downloadPath" placeholder="faex">
+        <button id="save">Save</button>
+
+        <p>
+            Download: 
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </p>
+
+        <p>
+            Completed images: <span id="finishedCount">0</span>
+            <button id="reset">Reset completed list</button>
+        </p>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
